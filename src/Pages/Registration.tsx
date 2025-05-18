@@ -12,26 +12,20 @@ const headerImg = {
 
 const Registration: FC = () => {
   const submitButtonRef = useRef<HTMLButtonElement>(null);
-
-  const onSubmitForm = useCallback(() => {
-    submitButtonRef.current?.click();
-  }, []);
-
-  const onCancelRegistration = useCallback(() => {
-    alert('Registration cancelled. You can always register later.');
-  }, []);
+  const onSubmitForm = useCallback(() => submitButtonRef.current?.click(), []);
+  const onCancelRegistration = useCallback(() => alert('Registration cancelled. You can always register later.'), []);
 
   const buttonProps = useMemo(
     () => ({
       primary: {
-        onClick: onSubmitForm,
         children: 'Register',
         id: 'register',
+        onClick: onSubmitForm,
         type: 'submit' as 'submit',
       },
       secondary: {
-        onClick: onCancelRegistration,
         children: 'Cancel',
+        onClick: onCancelRegistration,
       },
     }),
     [onSubmitForm, onCancelRegistration],

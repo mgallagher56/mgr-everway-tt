@@ -50,12 +50,11 @@ const EVActionCard: FC<ActionCardProps> = ({ children, headerImg, primaryButtonP
       onPrimaryAction,
       onSecondaryAction,
       primaryButtonChildren,
-      secondaryButtonChildren,
       restPrimaryButtonProps,
       restSecondaryButtonProps,
+      secondaryButtonChildren,
     ],
   );
-  console.log({ test: 'test' });
 
   return (
     <div className={actionCardRootStyles}>

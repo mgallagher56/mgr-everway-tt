@@ -12,7 +12,7 @@ interface TextFieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
 const TextField: FC<TextFieldProps> = ({ label, showIcon, id, type, ...props }) => (
   <label className={stack({ gap: 'xs' })} htmlFor={id}>
     {!!label && <EVTypography>{label}</EVTypography>}
-    <input className={textFieldStyles({ icon: type })} id={id} type={type} {...props}></input>
+    <input className={textFieldStyles({ icon: !!showIcon ? type : undefined })} id={id} type={type} {...props}></input>
   </label>
 );
 

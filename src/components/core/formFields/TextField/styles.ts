@@ -2,7 +2,6 @@ import { cva } from '../../../../styled-system/css';
 
 export const textFieldStyles = cva({
   base: {
-    textStyle: 'bodyMd',
     backgroundPositionX: 'token(spacing.lg)',
     backgroundPositionY: 'center',
     backgroundRepeat: 'no-repeat',
@@ -11,6 +10,7 @@ export const textFieldStyles = cva({
     borderRadius: 'xl',
     color: 'text',
     padding: 'input.textField',
+    textStyle: 'bodyMd',
     _placeholder: {
       color: 'text.placeholder',
       textStyle: 'bodyMd',

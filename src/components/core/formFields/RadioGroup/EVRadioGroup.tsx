@@ -22,8 +22,8 @@ const RadioGroup: FC<RadioGroupProps> = ({ isRequired, label, selectedValue, opt
         {options.map((option) => (
           <Stack gap="sm" direction="row" key={option.value}>
             <input
-              className={radioInputStyles}
               checked={selectedValue === option.value}
+              className={radioInputStyles}
               id={option.value}
               name={label}
               required={isRequired}

@@ -15,7 +15,7 @@ const RegistrationForm: FC<RegistrationFormProps> = ({ formId = 'register', subm
   const [{ email, password, plan }, setFormData] = useState<{
     email: string;
     password: string;
-    plan: PlanOptionsEnum | '';
+    plan: PlanOptionsEnum;
   }>({
     email: '',
     password: '',
@@ -45,40 +45,42 @@ const RegistrationForm: FC<RegistrationFormProps> = ({ formId = 'register', subm
   }, [email, password, plan]);
 
   return (
-    <form id={formId} onSubmit={onSubmitForm}>
+    <form id={formId} action={onSubmitForm}>
       <EVTypography className={css({ mb: 'xl' })} variant="titleXl" as="h3">
         Register
       </EVTypography>
       <Stack direction="column" gap="xl">
         <TextField
           aria-description="Please enter a valid email address"
-          type="email"
-          placeholder="email@example.com"
-          label="Email"
-          id="email"
-          name="email"
           aria-required="true"
-          required
           autoComplete="email"
-          onChange={onChangeTextField}
+          id="email"
+          label="Email"
+          name="email"
+          placeholder="email@example.com"
+          required
+          type="email"
           value={email}
+          showIcon
+          onChange={onChangeTextField}
         />
         <TextField
-          type="password"
-          placeholder="Password"
-          label="Password"
-          id="password"
-          name="password"
-          aria-required="true"
           aria-description='"Password must contain at least 6 or more characters"'
-          minLength={6}
-          title="Password must contain at least 6 or more characters"
-          required
+          aria-required="true"
           autoComplete="current-password"
-          onChange={onChangeTextField}
+          id="password"
+          label="Password"
+          minLength={6}
+          name="password"
+          placeholder="Password"
+          required
+          showIcon
+          title="Password must contain at least 6 or more characters"
+          type="password"
           value={password}
+          onChange={onChangeTextField}
         />
-        <RadioGroup label="Plan" options={planOptions} onChange={onChangeRadioInput} selectedValue={plan} />
+        <RadioGroup isRequired label="Plan" options={planOptions} onChange={onChangeRadioInput} selectedValue={plan} />
       </Stack>
       <button hidden ref={submitRef} type="submit" />
     </form>

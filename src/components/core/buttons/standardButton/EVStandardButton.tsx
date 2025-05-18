@@ -2,12 +2,11 @@ import type { FC } from 'react';
 import { EVStandardButtonRootStyles } from './styles';
 
 export interface EVStandardButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  onClick: () => void;
   children: React.ReactNode;
   variant?: 'solid' | 'text';
-  size?: 'small' | 'medium' | 'large';
+  onClick: () => void;
 }
-const EVStandardButton: FC<EVStandardButtonProps> = ({ variant = 'solid', size = 'medium', children, ...props }) => (
+const EVStandardButton: FC<EVStandardButtonProps> = ({ variant = 'solid', children, ...props }) => (
   <button className={EVStandardButtonRootStyles({ variant })} {...props}>
     {children}
   </button>

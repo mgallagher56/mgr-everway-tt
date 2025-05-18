@@ -2,17 +2,17 @@ import { cva } from '../../../../styled-system/css';
 
 export const EVStandardButtonRootStyles = cva({
   base: {
-    textStyle: 'titleMd',
-    padding: 'pill',
     borderRadius: 'pill',
     cursor: 'pointer',
+    padding: 'pill',
+    textStyle: 'titleMd',
   },
   variants: {
     variant: {
       solid: {
         bg: 'pill',
-        color: 'pill.text',
         border: 'pill',
+        color: 'pill.text',
         _hover: {
           bg: 'pill.outlineBg',
           border: 'pill',
@@ -20,8 +20,8 @@ export const EVStandardButtonRootStyles = cva({
       },
       text: {
         bg: 'pill.outlineBg',
-        color: 'pill.text',
         border: 'pill.transparent',
+        color: 'pill.text',
         _hover: {
           border: 'pill',
         },
