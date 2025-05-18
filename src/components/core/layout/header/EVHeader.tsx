@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import EVTypography from '../typography/EVTypography';
+import EVTypography from '../../typography/EVTypography';
 import { evHeaderRootStyle } from './styles';
 
 interface HeaderProps {

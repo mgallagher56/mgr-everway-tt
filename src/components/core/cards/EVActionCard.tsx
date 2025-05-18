@@ -7,7 +7,7 @@ import {
   actionCardImageStyles,
   actionCardRootStyles,
 } from './styles';
-import ButtonGroup from '../buttons/buttonGroup/ButtonGroup';
+import EVButtonGroup from '../buttons/buttonGroup/EVButtonGroup';
 import EVStandardButton, { type EVStandardButtonProps } from '../buttons/standardButton/EVStandardButton';
 
 interface ActionCardProps extends PropsWithChildren {
@@ -65,7 +65,7 @@ const EVActionCard: FC<ActionCardProps> = ({ children, headerImg, primaryButtonP
       )}
       <div className={actionCardContentStyles}>{children}</div>
       <div className={actionCardActionStyles}>
-        <ButtonGroup justifyContent="end" buttons={actionButtons} />
+        <EVButtonGroup justifyContent="end" buttons={actionButtons} />
       </div>
     </div>
   );

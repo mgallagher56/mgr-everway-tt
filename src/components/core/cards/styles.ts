@@ -6,7 +6,6 @@ export const actionCardRootStyles = css({
   borderRadius: '2xl',
   boxShadow: 'card',
   maxWidth: 'card.actionCardMaxWidth',
-  minWidth: 'max-content',
   width: '100%',
 });
 

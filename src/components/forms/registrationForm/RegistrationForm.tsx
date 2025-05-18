@@ -1,6 +1,6 @@
 import { useCallback, useState, type ChangeEvent, type FC, type Ref } from 'react';
-import TextField from '../../core/formFields/TextField/EVTextField';
-import RadioGroup from '../../core/formFields/RadioGroup/EVRadioGroup';
+import TextField from '../../core/inputs/TextField/EVTextField';
+import RadioGroup from '../../core/inputs/RadioGroup/EVRadioGroup';
 import { planOptions, PlanOptionsEnum } from './utils';
 import EVTypography from '../../core/typography/EVTypography';
 import { css } from '../../../styled-system/css';
@@ -51,6 +51,8 @@ const RegistrationForm: FC<RegistrationFormProps> = ({ formId = 'register', subm
       </EVTypography>
       <Stack direction="column" gap="xl">
         <TextField
+          required
+          showIcon
           aria-description="Please enter a valid email address"
           aria-required="true"
           autoComplete="email"
@@ -58,14 +60,14 @@ const RegistrationForm: FC<RegistrationFormProps> = ({ formId = 'register', subm
           label="Email"
           name="email"
           placeholder="email@example.com"
-          required
           type="email"
           value={email}
-          showIcon
           onChange={onChangeTextField}
         />
         <TextField
-          aria-description='"Password must contain at least 6 or more characters"'
+          required
+          showIcon
+          aria-description="Password must contain at least 6 or more characters"
           aria-required="true"
           autoComplete="current-password"
           id="password"
@@ -73,8 +75,6 @@ const RegistrationForm: FC<RegistrationFormProps> = ({ formId = 'register', subm
           minLength={6}
           name="password"
           placeholder="Password"
-          required
-          showIcon
           title="Password must contain at least 6 or more characters"
           type="password"
           value={password}

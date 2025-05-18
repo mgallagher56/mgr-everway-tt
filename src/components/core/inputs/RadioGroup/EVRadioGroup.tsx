@@ -18,7 +18,7 @@ const RadioGroup: FC<RadioGroupProps> = ({ isRequired, label, selectedValue, opt
   return (
     <Stack gap="xs">
       <EVTypography id={label}>{label}</EVTypography>
-      <Stack direction="row" gap="4xl" role="radiogroup" aria-required aria-labelledby={label}>
+      <Stack direction="row" gap="4xl" role="radiogroup" aria-required aria-labelledby={label} flexWrap="wrap">
         {options.map((option) => (
           <Stack gap="sm" direction="row" key={option.value}>
             <input

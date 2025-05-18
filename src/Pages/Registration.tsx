@@ -1,5 +1,5 @@
 import { useCallback, useMemo, useRef, type FC } from 'react';
-import Header from '../components/core/header/EVHeader';
+import Header from '../components/core/layout/header/EVHeader';
 import RegistrationForm from '../components/forms/registrationForm/RegistrationForm';
 
 import Container from '../components/core/layout/container/EVContainer';
