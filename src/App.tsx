@@ -1,7 +1,7 @@
-import { css } from '../styled-system/css';
+import Registration from './Pages/Registration';
 
 function App() {
-  return <div className={css({ fontSize: '2xl', fontWeight: 'bold' })}>Hello 🐼!</div>;
+  return <Registration />;
 }
 
 export default App;
