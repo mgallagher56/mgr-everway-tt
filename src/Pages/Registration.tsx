@@ -7,7 +7,7 @@ import ActionCard from '../components/core/cards/EVActionCard';
 
 const headerImg = {
   src: 'src/assets/images/registration-img.jpg',
-  alt: 'Workers in an office using computers at a desk',
+  alt: '',
 };
 
 const Registration: FC = () => {
