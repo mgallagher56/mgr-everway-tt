@@ -51,7 +51,7 @@ const textStyles = defineTextStyles({
 export default defineConfig({
   preflight: true,
   jsxFramework: 'react',
-  include: ['./src/**/*.{js,jsx,ts,tsx}'],
+  include: ['./src/**/*.{js,jsx,ts,tsx}', './src/**/*.stories.{js,jsx,ts,tsx}'],
   exclude: [],
   globalCss: {
     html: {
@@ -115,7 +115,7 @@ export default defineConfig({
           },
           card: {
             bg: { value: '#ffffff' },
-          }
+          },
         },
         gradients: {
           header: {
@@ -150,7 +150,7 @@ export default defineConfig({
           },
           card: {
             actionCardMaxWidth: { value: '482px' },
-          }
+          },
         },
         spacing: {
           xs: { value: '0.25rem' },

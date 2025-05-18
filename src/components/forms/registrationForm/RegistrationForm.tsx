@@ -5,13 +5,15 @@ import { planOptions, PlanOptionsEnum } from './utils';
 import EVTypography from '../../core/typography/EVTypography';
 import { css } from '../../../styled-system/css';
 import { Stack } from '../../../styled-system/jsx';
+import EVStandardButton from '../../core/buttons/standardButton/EVStandardButton';
 
 interface RegistrationFormProps {
   formId?: string;
+  isSubmitHidden?: boolean;
   submitRef: Ref<HTMLButtonElement>;
 }
 
-const RegistrationForm: FC<RegistrationFormProps> = ({ formId = 'register', submitRef }) => {
+const RegistrationForm: FC<RegistrationFormProps> = ({ formId = 'register', submitRef, isSubmitHidden }) => {
   const [{ email, password, plan }, setFormData] = useState<{
     email: string;
     password: string;
@@ -81,8 +83,10 @@ const RegistrationForm: FC<RegistrationFormProps> = ({ formId = 'register', subm
           onChange={onChangeTextField}
         />
         <RadioGroup isRequired label="Plan" options={planOptions} onChange={onChangeRadioInput} selectedValue={plan} />
+        <EVStandardButton hidden={isSubmitHidden} ref={submitRef} type="submit" onClick={onSubmitForm}>
+          Register
+        </EVStandardButton>
       </Stack>
-      <button hidden ref={submitRef} type="submit" />
     </form>
   );
 };

@@ -6,6 +6,7 @@ export const EVStandardButtonRootStyles = cva({
     cursor: 'pointer',
     padding: 'pill',
     textStyle: 'titleMd',
+    width: 'fit-content',
   },
   variants: {
     variant: {

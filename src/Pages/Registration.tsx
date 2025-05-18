@@ -45,7 +45,7 @@ const Registration: FC = () => {
             primaryButtonProps={buttonProps.primary}
             secondaryButtonProps={buttonProps.secondary}
           >
-            <RegistrationForm submitRef={submitButtonRef} />
+            <RegistrationForm isSubmitHidden submitRef={submitButtonRef} />
           </ActionCard>
         </Container>
       </main>
