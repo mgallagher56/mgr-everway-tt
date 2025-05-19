@@ -2,6 +2,7 @@ import { cva } from '../../../../styled-system/css';
 
 export const evHeaderRootStyle = cva({
   base: {
+    bg: 'header.bg',
     p: {
       base: 'header.mobile',
       sm: 'header',

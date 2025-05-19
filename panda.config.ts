@@ -116,6 +116,9 @@ export default defineConfig({
           card: {
             bg: { value: '#ffffff' },
           },
+          header: {
+            bg: { value: '#ffffff' },
+          },
         },
         gradients: {
           header: {
