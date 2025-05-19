@@ -8,7 +8,7 @@ export interface EVStandardButtonProps extends React.ButtonHTMLAttributes<HTMLBu
   onClick?: () => void;
 }
 const EVStandardButton: FC<EVStandardButtonProps> = ({ variant = 'solid', children, ref, ...props }) => (
-  <button className={EVStandardButtonRootStyles({ variant })} {...props}>
+  <button className={EVStandardButtonRootStyles({ variant })} ref={ref} {...props}>
     {children}
   </button>
 );
