@@ -1,4 +1,4 @@
-import { type ChangeEvent, type FC } from 'react';
+import { useId, type ChangeEvent, type FC } from 'react';
 import EVTypography from '../../typography/EVTypography';
 import { Stack } from '../../../../styled-system/jsx';
 import { radioInputStyles } from './styles';
@@ -15,10 +15,11 @@ interface RadioGroupProps {
 }
 
 const RadioGroup: FC<RadioGroupProps> = ({ isRequired, label, selectedValue, options, onChange }) => {
+  const labelId = useId();
   return (
     <Stack gap="xs">
-      <EVTypography id={label}>{label}</EVTypography>
-      <Stack direction="row" gap="4xl" role="radiogroup" aria-required aria-labelledby={label} flexWrap="wrap">
+      <EVTypography id={labelId}>{label}</EVTypography>
+      <Stack direction="row" gap="4xl" role="radiogroup" aria-required aria-labelledby={labelId} flexWrap="wrap">
         {options.map((option) => (
           <Stack gap="sm" direction="row" key={option.value}>
             <input

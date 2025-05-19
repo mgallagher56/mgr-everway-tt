@@ -60,7 +60,7 @@ export default defineConfig({
   },
   globalFontface: {
     Figtree: {
-      src: 'url(src/assets/fonts/Figtree/Figtree-VariableFont_wght.ttf) format("ttf")',
+      src: 'url(/assets/fonts/Figtree/Figtree-VariableFont_wght.ttf) format("ttf")',
       fontWeight: '200 900',
       fontStyle: 'normal',
       fontDisplay: 'swap',

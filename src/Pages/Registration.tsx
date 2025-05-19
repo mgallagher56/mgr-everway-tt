@@ -6,7 +6,7 @@ import Container from '../components/core/layout/container/EVContainer';
 import ActionCard from '../components/core/cards/EVActionCard';
 
 const headerImg = {
-  src: 'src/assets/images/registration-img.jpg',
+  src: '/assets/images/registration-img.jpg',
   alt: '',
 };
 

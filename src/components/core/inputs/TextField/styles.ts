@@ -19,11 +19,11 @@ export const textFieldStyles = cva({
   variants: {
     icon: {
       email: {
-        backgroundImage: 'url(src/assets/icons/mail-icon.svg)',
+        backgroundImage: 'url(/assets/icons/mail-icon.svg)',
         padding: 'input.textFieldWithIcon',
       },
       password: {
-        backgroundImage: 'url(src/assets/icons/lock-icon.svg)',
+        backgroundImage: 'url(/assets/icons/lock-icon.svg)',
         backgroundRepeat: 'no-repeat',
         padding: 'input.textFieldWithIcon',
       },
