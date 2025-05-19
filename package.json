@@ -5,13 +5,13 @@
   "type": "module",
   "scripts": {
     "prepare": "husky && panda codegen",
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "tsc -b && vite build",
     "lint": "npm run lint:eslint && npm run lint:tsc",
     "lint:eslint": "eslint .",
     "lint:tsc": "tsc --project ./tsconfig.json",
     "format": "prettier --write src/",
-    "preview": "vite preview",
+    "preview": "vite preview --open",
     "build-storybook": "storybook build",
     "storybook": "storybook dev -p 6006",
     "chromatic": "chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}"
